@@ -1,43 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/test.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="test.css">
+
+  <title>Form Validator</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-12">
-            <div class="box">input-success
-                <input class="input-sucess">
-            </div>
-          </div>
-          <div class="col-md-12 col-12">
-            <div class="box">input-error
-                <input class="input-error">
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="box">input-suggest
-                <input class="input-suggest">
-            </div>
-          </div>
-          <!-- <div class="col-md-3 col-6">
-            <div class="box">笨蛋盒子3</div>
-          </div>
+  <div class="container">
+      <form id="form" class='form'>
+        <h2>註冊新帳號</h2>
+        <div class="form-control">
+          <label for="username">帳號</label>
+          <input type="text" id="username" placeholder="abc@gmail.com">
+          <small>Error message</small>
         </div>
-        <div class="row no-gutters">
-          <div class="col-6">
-            <div class="box">笨蛋盒子4</div>
-          </div>
-          <div class="col-6">
-            <div class="box">笨蛋盒子5</div>
-          </div>
+        <!-- <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="username" placeholder="Enter username">
+          <small>Error message</small>
         </div> -->
-      </div>
+        <div class="form-control">
+          <label for="password">密碼</label>
+          <input type="text" id="password" placeholder="請輸入6-12碼英數字">
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password2">確認密碼</label>
+          <input type="text" id="password2" placeholder="請再次輸入密碼">
+          <small>Error message</small>
+        </div>
+        <button type="submit">註冊</button>
+      </form>
+  </div>
 
+
+
+  <script src="test.js"></script>
+  
 </body>
 </html>
