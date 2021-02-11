@@ -25,11 +25,42 @@ function validateEmail(username) {
     return re.test(String(username).toLowerCase());
 }
 
+//Check required fields
+function checkRequired(inputArr){
+    inputArr.forEach(function(input){
+        if(input.value()===''){
+            showError(input,'${getFieldName(input)} 請輸入帳號');
+        }else{
+            showSuccess(input);
+        }
+    });
+  
+}
+//Check passwords match
+function checkPasswordsMatch(input1,input2){
+    if(input1.value !== input2.value){
+        showError(input2,'密碼不一致');
+
+    }
+}
+
+
+
+
+//Get 
+// function getFieldName(input){
+//     return input.id.charAt(0).toUpperCase()+input.id.slice(1);
+// }
 
 //Event listener
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
+
+    // checkRequired([username,,password,password2]);
+
+    // checkPasswordsMatch(password,password2);
+
 
     if(username.value ===''){
         showError(username,'請輸入帳號');
@@ -50,7 +81,7 @@ form.addEventListener('submit',function(e){
 
     if(password.value ===''){
         showError(password,'請輸入密碼');
-        console.log(1);
+        // console.log(1);
     }else{
         showSuccess(password);
     }
@@ -61,4 +92,6 @@ form.addEventListener('submit',function(e){
     }else{
         showSuccess(password2);
     }
+
+    checkPasswordsMatch(password, password2);
 });
