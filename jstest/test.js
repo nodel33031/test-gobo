@@ -66,7 +66,7 @@ form.addEventListener('submit',function(e){
         showError(username,'請輸入帳號');
     }
     else if(!validateEmail(username.value)){
-        showError(username,'輸入的帳號格式錯誤');
+        showError(username,'格式錯誤');
     
     }
     else{
