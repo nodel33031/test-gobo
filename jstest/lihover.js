@@ -4,7 +4,7 @@ const dropdownBackground = document.querySelector(".dropdownBackground");
 function enterHandler(){
     this.classList.add("trigger-enter");
 
-    setTimeout(()=>{this.classList.add("trigger-enter-active");},50);
+    setTimeout(()=>{this.classList.add("trigger-enter-active");},100);
     
 
     const dropdown = this.querySelector(".dropdown");
