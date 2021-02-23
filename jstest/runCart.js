@@ -7,13 +7,13 @@ var runcart = new TimelineMax({
 runcart.stop();
 
 runcart.to('.box',.3,{
-    x:500
+    x:1000
 }).to('.box',.1,{
     opacity:0
     
 })
 
-setTimeout('window.location.reload(" http://127.0.0.1:5501/jstest/runCart.html',3000)
+// setTimeout('window.location.reload(" http://127.0.0.1:5501/jstest/runCart.html',3000)
 
 
 document.getElementById('play').onclick= function(){
@@ -21,7 +21,7 @@ document.getElementById('play').onclick= function(){
 
     
     
-    setTimeout(`location.reload()`,800)
+    setTimeout(`location.reload()`,1000)
    
     
 } ;    
