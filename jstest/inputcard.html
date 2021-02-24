@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <input type=text  maxlength=4 class="input">-
+  <input type=text  maxlength=4 class="input">-
+  <input type=text  maxlength=4 class="input">-
+  <input type=text  maxlength=4 class="input"> 
+
+<script>
+   $('.input').keyup(function(e){
+
+    if($(this).val().length==$(this).attr('maxlength'))   
+    $(this).next('input').focus();   
+    
+    });  
+
+
+  var text_input = document.querySelector("input");
+
+  text_input.addEventListener("keydown", function(e){
+  
+  // console.log(e.which);
+  
+  
+  if(e.which >= 48 && e.which <= 57 || e.which == 8){ 
+  
+  }else{
+     e.preventDefault(); 
+  }
+});
+
+
+ 
+  </script>
+</body>
+</html>
