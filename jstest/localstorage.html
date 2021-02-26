@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button id="view">頁面一覽表</button>
+
+    <button id="delete">清除購物車</button>
+
+    <div>
+       
+        
+        <img src="https://picsum.photos/100/100/?random=1"><br>
+        <button type="submit" id="12033">加入購物車</button><br>
+        <img src="https://picsum.photos/100/100/?random=2"><br>
+        <button type="submit" id="12034">加入購物車</button><br>
+        <img src="https://picsum.photos/100/100/?random=3"><br>
+        <button type="submit" id="12035">加入購物車</button><br>
+        <img src="https://picsum.photos/100/100/?random=4"><br>
+        <button type="submit" id="12036">加入購物車</button><br>
+        
+        
+         您好，目前您購買的項目有<br>
+        <p id="test12033"></p><br>
+        <p id="test12034"></p><br>
+        <p id="test12035"></p><br>
+        <p id="test12036"></p><br>
+    </div>
+
+
+    <script>
+        // 12033
+        $(document).ready(function(){
+            $('#12033').click(function(){
+                var testData = {
+                id:'ID:12033',
+                name:'賓士',
+                price:'$3000',
+        }
+        localStorage.setItem('carBox12033', JSON.stringify(testData));
+
+        var carData = localStorage.getItem('carBox12033');
+
+        
+    
+        var carDataJson = JSON.parse(carData ); 
+        console.log(carDataJson ); 
+            })
+
+        })
+        
+        // 12034
+
+        $(document).ready(function(){
+            $('#12034').click(function(){
+                var testData = {
+                id:'ID:12034',
+                name:'瑪莎拉蒂',
+                price:'$4000',
+        }
+        localStorage.setItem('carBox12034', JSON.stringify(testData));
+
+        var carData = localStorage.getItem('carBox12034');
+
+        
+    
+        var carDataJson = JSON.parse(carData ); 
+        console.log(carDataJson ); 
+            })
+
+        })
+
+        // 12035
+
+        $(document).ready(function(){
+            $('#12035').click(function(){
+                var testData = {
+                id:'ID:12035',
+                name:'藍寶堅尼',
+                price:'$5000',
+        }
+        localStorage.setItem('carBox12035', JSON.stringify(testData));
+
+        var carData = localStorage.getItem('carBox12035');
+
+        
+    
+        var carDataJson = JSON.parse(carData ); 
+        console.log(carDataJson ); 
+            })
+
+        })
+
+        // 12036
+
+        $(document).ready(function(){
+            $('#12035').click(function(){
+                var testData = {
+                id:'ID:12036',
+                name:'阿布拉基',
+                price:'$6666',
+        }
+        localStorage.setItem('carBox12036', JSON.stringify(testData));
+
+        var carData = localStorage.getItem('carBox12036');
+
+        
+    
+        var carDataJson = JSON.parse(carData ); 
+        console.log(carDataJson ); 
+            })
+
+        })
+
+
+
+
+        // ====================================================
+
+        // 12033
+        $(document).ready(function(){
+            $('#view').click(function(){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12033'));
+      
+        document.getElementById('test12033').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
+                      
+
+            })
+        })
+
+        // 12034
+        $(document).ready(function(){
+            $('#view').click(function(){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12034'));
+      
+        document.getElementById('test12034').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
+                      
+
+            })
+        })
+        // 12035
+
+        $(document).ready(function(){
+            $('#view').click(function(){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12035'));
+      
+        document.getElementById('test12035').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
+                      
+
+            })
+        })
+
+
+        // 12036
+
+        $(document).ready(function(){
+            $('#view').click(function(){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12036'));
+      
+        document.getElementById('test12036').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
+                      
+
+            })
+        })
+
+        // ======================================================
+        $(document).ready(function(){
+            $('#delete').click(function(){
+                localStorage.removeItem('carBox12033')
+                document.getElementById('test12033').innerHTML="";
+            
+            });           
+
+        })
+
+        $(document).ready(function(){
+            $('#delete').click(function(){
+                localStorage.removeItem('carBox12034')
+                document.getElementById('test12034').innerHTML="";
+            
+            });           
+
+        })
+        
+        $(document).ready(function(){
+            $('#delete').click(function(){
+                localStorage.removeItem('carBox12035')
+                document.getElementById('test12035').innerHTML="";
+            
+            });           
+
+        })
+
+        $(document).ready(function(){
+            $('#delete').click(function(){
+                localStorage.removeItem('carBox12036')
+                document.getElementById('test12036').innerHTML="";
+            
+            });           
+
+        })
+
+
+        
+
+
+
+    
+    
+
+  
+    </script>
+</body>
+</html>
