@@ -127,33 +127,38 @@
         // 12033
         $(document).ready(function(){
             $('#view').click(function(){
-                var carDataJson = JSON.parse(localStorage.getItem('carBox12033'));
-      
-        document.getElementById('test12033').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
-                      
-
+               if(localStorage.getItem('carBox12033') !== null){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12033'));                 
+                
+                    document.getElementById('test12033').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;                               
+                }
+               
             })
-        })
-
+        })             
+                
+      
+        
         // 12034
         $(document).ready(function(){
             $('#view').click(function(){
-                var carDataJson = JSON.parse(localStorage.getItem('carBox12034'));
-      
-        document.getElementById('test12034').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
-                      
-
+               if(localStorage.getItem('carBox12034') !== null){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12034'));                 
+                
+                    document.getElementById('test12034').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;                               
+                }
+               
             })
         })
         // 12035
 
         $(document).ready(function(){
             $('#view').click(function(){
-                var carDataJson = JSON.parse(localStorage.getItem('carBox12035'));
-      
-        document.getElementById('test12035').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;
-                      
-
+               if(localStorage.getItem('carBox12035') !== null){
+                var carDataJson = JSON.parse(localStorage.getItem('carBox12035'));                 
+                
+                    document.getElementById('test12035').innerHTML=carDataJson.id+"<br>"+carDataJson.name+"<br>"+carDataJson.price  ;                               
+                }
+               
             })
         })
 
